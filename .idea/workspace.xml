@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ea15485-20e4-49ae-86bc-203c76f35079" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ConnectionManager.java" afterPath="$PROJECT_DIR$/src/main/java/ConnectionManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ConnectionManagerTest.java" afterPath="$PROJECT_DIR$/src/test/java/ConnectionManagerTest.java" />
     </list>
     <ignored path="InnerClasses.iws" />
@@ -29,17 +29,17 @@
       <file leaf-file-name="ConnectionManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ConnectionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+            <state relative-caret-position="315">
+              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#ConnectionManager#0" expanded="false" />
+                <element signature="method#ConnectionManager#0;class#ConnectionManager#0" expanded="false" />
+                <element signature="method#getConnection#0;class#ConnectionManager#0" expanded="false" />
+                <element signature="method#getConnection#1;class#ConnectionManager#0" expanded="false" />
+                <element signature="method#addConnection#0;class#ConnectionManager#0" expanded="false" />
+                <element signature="class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+                <element signature="method#ManagedConnection#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
                 <element signature="method#getPort#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
-                <element signature="e#2090#2091#0" expanded="true" />
-                <element signature="e#2123#2124#0" expanded="true" />
-                <element signature="e#2173#2174#0" expanded="true" />
-                <element signature="e#2208#2209#0" expanded="true" />
-                <element signature="e#2267#2268#0" expanded="true" />
-                <element signature="e#2306#2307#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,8 +48,8 @@
       <file leaf-file-name="ConnectionManagerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ConnectionManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="287">
+              <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,8 +80,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Connection.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ConnectionManagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ConnectionManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ConnectionManagerTest.java" />
       </list>
     </option>
   </component>
@@ -722,7 +722,7 @@
       <option name="presentableId" value="Default" />
       <updated>1475092647928</updated>
       <workItem from="1475092649680" duration="4931000" />
-      <workItem from="1475168224160" duration="985000" />
+      <workItem from="1475168224160" duration="1369000" />
     </task>
     <servers />
   </component>
@@ -742,12 +742,24 @@
     <history-entry file="ConnectionManagerTest - 2016.09.29 at 13h 09m 45s.xml">
       <configuration name="ConnectionManagerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ConnectionManagerTest - 2016.09.29 at 13h 14m 23s.xml">
+      <configuration name="ConnectionManagerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConnectionManagerTest - 2016.09.29 at 13h 16m 48s.xml">
+      <configuration name="ConnectionManagerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConnectionManagerTest - 2016.09.29 at 13h 18m 52s.xml">
+      <configuration name="ConnectionManagerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConnectionManagerTest - 2016.09.29 at 13h 19m 20s.xml">
+      <configuration name="ConnectionManagerTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="ConnectionManagerTest_addErrorTest - 2016.09.29 at 13h 04m 00s.xml">
       <configuration name="ConnectionManagerTest.addErrorTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5916000" />
+    <option name="totallyTimeSpent" value="6300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -761,7 +773,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -771,7 +783,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3987034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -793,13 +805,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ConnectionManagerTest.java</url>
-          <line>46</line>
-          <properties />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
@@ -822,14 +827,14 @@
         <state relative-caret-position="450">
           <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#ConnectionManager#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#getConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#getConnection#1;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#addConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#ManagedConnection#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
             <element signature="method#getPort#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="e#2090#2091#0" expanded="true" />
-            <element signature="e#2123#2124#0" expanded="true" />
-            <element signature="e#2173#2174#0" expanded="true" />
-            <element signature="e#2208#2209#0" expanded="true" />
-            <element signature="e#2267#2268#0" expanded="true" />
-            <element signature="e#2306#2307#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -860,8 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ConnectionManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="287">
+          <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -870,17 +875,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ConnectionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        <state relative-caret-position="315">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#ConnectionManager#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#getConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#getConnection#1;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#addConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#ManagedConnection#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
             <element signature="method#getPort#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="e#2090#2091#0" expanded="true" />
-            <element signature="e#2123#2124#0" expanded="true" />
-            <element signature="e#2173#2174#0" expanded="true" />
-            <element signature="e#2208#2209#0" expanded="true" />
-            <element signature="e#2267#2268#0" expanded="true" />
-            <element signature="e#2306#2307#0" expanded="true" />
           </folding>
         </state>
       </provider>
