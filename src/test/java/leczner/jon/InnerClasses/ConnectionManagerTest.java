@@ -54,10 +54,32 @@ public class ConnectionManagerTest {
     }
 
     @Test
-    public void getFieldsFailTest() {
+    public void getIPFailTest() {
         Connection c = cm.getConnection(IPAddresses[0], Protocol.HTTP);
         c.connect();
         c.close();
         assertEquals(ConnectionManager.ERROR, cm.getConnections().get(0).getIP());
+    }
+
+    @Test
+    public void getPortFailTest() {
+        Connection c = cm.getConnection(IPAddresses[0], Protocol.HTTP);
+        c.connect();
+        c.close();
+        assertEquals(-1, cm.getConnections().get(0).getPort());
+    }
+
+    @Test
+    public void connectTest() {
+        Connection c = cm.getConnection(IPAddresses[0], Protocol.HTTP);
+        assertEquals(ConnectionManager.SUCCESS, c.connect());
+    }
+
+    @Test
+    public void connectFailTest() {
+        Connection c = cm.getConnection(IPAddresses[0], Protocol.HTTP);
+        c.connect();
+        c.close();
+        assertEquals(ConnectionManager.ERROR, c.connect());
     }
 }
