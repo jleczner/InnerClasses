@@ -21,7 +21,20 @@ public class ConnectionManager {
 
     public Connection getConnection(String IP, Connection.Protocol protocol) {
         for (Connection c : connections) {
-            if (c.getIP().equals(IP) && c.getProtocol() == protocol) {
+            String cIP = c.getIP();
+            Connection.Protocol cProtocol = c.getProtocol();
+            if (cIP.equals(IP) && cProtocol == protocol) {
+                return c;
+            }
+        }
+        return null;
+    }
+
+    public Connection getConnection(String IP, int port) {
+        for (Connection c : connections) {
+            String cIP = c.getIP();
+            int cPort = c.getPort();
+            if (cIP.equals(IP) && cPort == port) {
                 return c;
             }
         }
@@ -59,17 +72,17 @@ public class ConnectionManager {
 
         @Override
         public String getIP() {
-            return null;
+            return IP;
         }
 
         @Override
         public int getPort() {
-            return 0;
+            return port;
         }
 
         @Override
         public Protocol getProtocol() {
-            return null;
+            return protocol;
         }
 
         @Override

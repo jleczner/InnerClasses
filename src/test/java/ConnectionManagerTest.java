@@ -3,6 +3,7 @@ import org.junit.Test;
 import java.util.Random;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * Created by jonathanleczner on 9/28/16.
@@ -40,5 +41,9 @@ public class ConnectionManagerTest {
         assertEquals(ConnectionManager.ERROR, cm.addConnection(getRandomIP(), Connection.Protocol.HTTP));
     }
 
-    
+    @Test
+    public void getConnectionTest() {
+        cm.addConnection(IPAddresses[0], Connection.Protocol.SMTP);
+        assertNotNull(cm.getConnection(IPAddresses[0], Connection.Protocol.SMTP));
+    }
 }
