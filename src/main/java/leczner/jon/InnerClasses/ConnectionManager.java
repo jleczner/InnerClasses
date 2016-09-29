@@ -23,6 +23,10 @@ public class ConnectionManager {
         return maxSize;
     }
 
+    public List<Connection> getConnections() {
+        return connections;
+    }
+
     public Connection getConnection(String IP, Protocol protocol) {
         Connection connection = new ManagedConnection(IP, protocol);
         if (connection.connect().equals(SUCCESS)) {

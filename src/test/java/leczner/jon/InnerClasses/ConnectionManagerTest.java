@@ -4,8 +4,11 @@ import org.junit.Test;
 
 import java.util.Random;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
+
+import static leczner.jon.InnerClasses.Connection.Protocol;
 
 /**
  * Created by jonathanleczner on 9/28/16.
@@ -32,20 +35,22 @@ public class ConnectionManagerTest {
 
     @Test
     public void newConnectionTest() {
-        assertNotNull(cm.getConnection(getRandomIP(), Connection.Protocol.HTTP));
+        assertNotNull(cm.getConnection(getRandomIP(), Protocol.HTTP));
     }
 
     @Test
     public void tooManyConnectionsTest() {
         for (int i = 0; i < cm.getMaxSize(); i++)
-            cm.getConnection(getRandomIP(), Connection.Protocol.HTTP);
+            cm.getConnection(getRandomIP(), Protocol.HTTP);
 
-        assertNull(cm.getConnection(getRandomIP(), Connection.Protocol.HTTP));
+        assertNull(cm.getConnection(getRandomIP(), Protocol.HTTP));
     }
 
     @Test
     public void getFieldsTest() {
-        Connection c = cm.getConnection(getRandomIP(), Protocol.HTTP);
+        Connection c = cm.getConnection(IPAddresses[0], Protocol.HTTP);
+        c.connect();
+        assertEquals(IPAddresses[0], cm.connections.get(0).getIP())
     }
 
     @Test
