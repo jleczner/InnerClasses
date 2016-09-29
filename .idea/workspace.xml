@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ea15485-20e4-49ae-86bc-203c76f35079" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/leczner/jon/InnerClasses/ConnectionManagerTest.java" afterPath="$PROJECT_DIR$/src/test/java/leczner/jon/InnerClasses/ConnectionManagerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leczner/jon/InnerClasses/Connection.java" afterPath="$PROJECT_DIR$/src/main/java/leczner/jon/InnerClasses/Connection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leczner/jon/InnerClasses/ConnectionManager.java" afterPath="$PROJECT_DIR$/src/main/java/leczner/jon/InnerClasses/ConnectionManager.java" />
     </list>
     <ignored path="InnerClasses.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,36 +29,38 @@
       <file leaf-file-name="Connection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/leczner/jon/InnerClasses/Connection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            <state relative-caret-position="120">
+              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectionManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ConnectionManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/leczner/jon/InnerClasses/ConnectionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="126" column="26" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
+            <state relative-caret-position="180">
+              <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#ConnectionManager#0" expanded="false" />
                 <element signature="method#ConnectionManager#0;class#ConnectionManager#0" expanded="false" />
-                <element signature="e#664#665#0" expanded="true" />
-                <element signature="e#698#699#0" expanded="true" />
+                <element signature="e#728#729#0" expanded="true" />
+                <element signature="e#762#763#0" expanded="true" />
                 <element signature="method#getConnection#0;class#ConnectionManager#0" expanded="false" />
-                <element signature="method#getConnection#1;class#ConnectionManager#0" expanded="false" />
-                <element signature="method#getConnection#2;class#ConnectionManager#0" expanded="false" />
                 <element signature="method#ManagedConnection#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
                 <element signature="method#ManagedConnection#1;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
                 <element signature="method#getPort#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+                <element signature="method#getIP#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+                <element signature="method#getPort#1;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+                <element signature="method#connect#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+                <element signature="method#close#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectionManagerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConnectionManagerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/leczner/jon/InnerClasses/ConnectionManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="227">
@@ -98,8 +100,9 @@
         <option value="$PROJECT_DIR$/src/main/java/Connection.java" />
         <option value="$PROJECT_DIR$/src/test/java/ConnectionManagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ConnectionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/leczner/jon/InnerClasses/ConnectionManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/leczner/jon/InnerClasses/ConnectionManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/leczner/jon/InnerClasses/Connection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/leczner/jon/InnerClasses/ConnectionManager.java" />
       </list>
     </option>
   </component>
@@ -753,7 +756,7 @@
       <option name="presentableId" value="Default" />
       <updated>1475092647928</updated>
       <workItem from="1475092649680" duration="4931000" />
-      <workItem from="1475168224160" duration="8535000" />
+      <workItem from="1475168224160" duration="8883000" />
     </task>
     <servers />
   </component>
@@ -790,7 +793,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13466000" />
+    <option name="totallyTimeSpent" value="13814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -804,7 +807,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -861,14 +864,16 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ConnectionManager#0" expanded="false" />
             <element signature="method#ConnectionManager#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="e#664#665#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#762#763#0" expanded="true" />
             <element signature="method#getConnection#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#getConnection#1;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#getConnection#2;class#ConnectionManager#0" expanded="false" />
             <element signature="method#ManagedConnection#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
             <element signature="method#ManagedConnection#1;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
             <element signature="method#getPort#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#getIP#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#getPort#1;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#connect#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#close#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -897,34 +902,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/leczner/jon/InnerClasses/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/leczner/jon/InnerClasses/ConnectionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="126" column="26" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#ConnectionManager#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="e#664#665#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="method#getConnection#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#getConnection#1;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#getConnection#2;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#ManagedConnection#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#ManagedConnection#1;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#getPort#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/leczner/jon/InnerClasses/ConnectionManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -934,6 +911,36 @@
             <element signature="method#getRandomIP#0;class#ConnectionManagerTest#0" expanded="false" />
             <element signature="e#974#975#0" expanded="true" />
             <element signature="e#1051#1052#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/leczner/jon/InnerClasses/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/leczner/jon/InnerClasses/ConnectionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#ConnectionManager#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#762#763#0" expanded="true" />
+            <element signature="method#getConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#ManagedConnection#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#ManagedConnection#1;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#getPort#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#getIP#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#getPort#1;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#connect#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
+            <element signature="method#close#0;class#ManagedConnection#0;class#ConnectionManager#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -11,8 +11,9 @@ import static leczner.jon.InnerClasses.Connection.Protocol;
 public class ConnectionManager {
     private List<Connection> connections;
     private int maxSize;
-    public static final String SUCCESS = "New connect added";
-    public static final String ERROR = "Could not add, manager is full";
+    public static final String SUCCESS = "New connection added";
+    public static final String ERROR = "Connection manager is full";
+    public static final String CLOSEDERROR = "Could not access";
 
     public ConnectionManager(int maxSize) {
         connections = new ArrayList<>();
@@ -36,13 +37,13 @@ public class ConnectionManager {
         }
     }
 
-    public Connection getConnection(String IP, int port) {
+    public Connection getConnection(String IP, String port) {
         Protocol protocol = Protocol.HTTP;
         switch (port) {
-            case 22:
+            case "22":
                 protocol = Protocol.SSH;
                 break;
-            case 25:
+            case "25":
                 protocol = Protocol.SMTP;
                 break;
             default:
@@ -56,7 +57,7 @@ public class ConnectionManager {
         }
     }
 
-    public Connection getConnection(String IP, int port, Protocol protocol) {
+    public Connection getConnection(String IP, String port, Protocol protocol) {
         Connection connection = new ManagedConnection(IP, port, protocol);
         if (connection.connect().equals(SUCCESS)) {
             return connection;
@@ -67,7 +68,7 @@ public class ConnectionManager {
 
     private class ManagedConnection implements Connection {
         private String IP;
-        private int port;
+        private String port;
         private Protocol protocol;
         private boolean closed = false;
 
@@ -77,29 +78,37 @@ public class ConnectionManager {
             port = getPort(protocol);
         }
 
-        public ManagedConnection(String IP, int port, Protocol protocol) {
+        public ManagedConnection(String IP, String port, Protocol protocol) {
             this.IP = IP;
             this.port = port;
             this.protocol = protocol;
         }
 
-        private int getPort(Protocol protocol) {
+        private String getPort(Protocol protocol) {
             switch (protocol) {
-                case HTTP: return 80;
-                case SMTP: return 25;
-                case SSH: return 22;
-                default: return 80;
+                case HTTP: return "80";
+                case SMTP: return "25";
+                case SSH: return "22";
+                default: return "80";
             }
         }
 
         @Override
         public String getIP() {
-            return IP;
+            if (!closed) {
+                return IP;
+            } else {
+                return CLOSEDERROR;
+            }
         }
 
         @Override
-        public int getPort() {
-            return port;
+        public String getPort() {
+            if (!closed) {
+                return port;
+            } else {
+                return CLOSEDERROR;
+            }
         }
 
         @Override

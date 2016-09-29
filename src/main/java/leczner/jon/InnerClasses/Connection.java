@@ -7,7 +7,7 @@ public interface Connection {
     enum Protocol {HTTP, SMTP, SSH}
 
     String getIP();
-    int getPort();
+    String getPort();
     Protocol getProtocol();
     String connect();
     void close();
