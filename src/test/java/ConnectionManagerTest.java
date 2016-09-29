@@ -34,8 +34,11 @@ public class ConnectionManagerTest {
 
     @Test
     public void addErrorTest() {
-        for (int i = 0; i < cm.getMaxSize())
-        cm.addConnection(getRandomIP(), Connection.Protocol.HTTP);
+        for (int i = 0; i < cm.getMaxSize(); i++)
+            cm.addConnection(getRandomIP(), Connection.Protocol.HTTP);
 
+        assertEquals(ConnectionManager.ERROR, cm.addConnection(getRandomIP(), Connection.Protocol.HTTP));
     }
+
+    
 }
