@@ -58,7 +58,7 @@ public class ConnectionManagerTest {
         Connection c = cm.getConnection(IPAddresses[0], Protocol.HTTP);
         c.connect();
         c.close();
-        assertEquals(ConnectionManager.ERROR, cm.getConnections().get(0).getIP());
+        assertEquals(ConnectionManager.CLOSEDERROR, cm.getConnections().get(0).getIP());
     }
 
     @Test
@@ -66,7 +66,7 @@ public class ConnectionManagerTest {
         Connection c = cm.getConnection(IPAddresses[0], Protocol.HTTP);
         c.connect();
         c.close();
-        assertEquals(-1, cm.getConnections().get(0).getPort());
+        assertEquals(ConnectionManager.CLOSEDERROR, cm.getConnections().get(0).getPort());
     }
 
     @Test
@@ -80,6 +80,6 @@ public class ConnectionManagerTest {
         Connection c = cm.getConnection(IPAddresses[0], Protocol.HTTP);
         c.connect();
         c.close();
-        assertEquals(ConnectionManager.ERROR, c.connect());
+        assertEquals(ConnectionManager.CLOSEDERROR, c.connect());
     }
 }

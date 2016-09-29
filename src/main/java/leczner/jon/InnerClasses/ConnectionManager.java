@@ -126,7 +126,7 @@ public class ConnectionManager {
                     return ERROR;
                 }
             } else {
-                return ERROR;
+                return CLOSEDERROR;
             }
         }
 
