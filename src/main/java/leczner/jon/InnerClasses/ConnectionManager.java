@@ -52,6 +52,15 @@ public class ConnectionManager {
         }
     }
 
+    public Connection getConnection(String IP, int port, Protocol protocol) {
+        Connection connection = new ManagedConnection(IP, port, protocol);
+        if (connection.connect().equals(SUCCESS)) {
+            return connection;
+        } else {
+            return null;
+        }
+    }
+
     private class ManagedConnection implements Connection {
         private String IP;
         private int port;
@@ -61,6 +70,12 @@ public class ConnectionManager {
             this.IP = IP;
             this.protocol = protocol;
             port = getPort(protocol);
+        }
+
+        public ManagedConnection(String IP, int port, Protocol protocol) {
+            this.IP = IP;
+            this.port = port;
+            this.protocol = protocol;
         }
 
         private int getPort(Protocol protocol) {

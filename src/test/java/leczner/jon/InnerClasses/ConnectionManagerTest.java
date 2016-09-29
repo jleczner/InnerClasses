@@ -44,26 +44,12 @@ public class ConnectionManagerTest {
     }
 
     @Test
-    public void getConnectionTest() {
-        cm.getConnection(IPAddresses[0], Connection.Protocol.SMTP);
-        assertNotNull(cm.getConnection(IPAddresses[0], Connection.Protocol.SMTP));
+    public void getFieldsTest() {
+        Connection c = cm.getConnection(getRandomIP(), Protocol.HTTP);
     }
 
     @Test
-    public void getConnectionFailTest() {
-        cm.getConnection(IPAddresses[0], Connection.Protocol.SMTP);
-        assertNull(cm.getConnection(IPAddresses[0], Connection.Protocol.HTTP));
-    }
+    public void getFieldsFailTest() {
 
-    @Test
-    public void getConnectionPort() {
-        cm.getConnection(IPAddresses[0], Connection.Protocol.SSH);
-        assertNotNull(cm.getConnection(IPAddresses[0], 22));
-    }
-
-    @Test
-    public void getConnectionPortFail() {
-        cm.getConnection(IPAddresses[0], Connection.Protocol.SSH);
-        assertNull(cm.getConnection(IPAddresses[0], 21));
     }
 }
