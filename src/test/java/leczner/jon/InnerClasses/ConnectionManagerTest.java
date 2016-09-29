@@ -1,8 +1,9 @@
+package leczner.jon.InnerClasses;
+
 import org.junit.Test;
 
 import java.util.Random;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
@@ -30,39 +31,39 @@ public class ConnectionManagerTest {
     }
 
     @Test
-    public void addConnectionTest() {
-        assertEquals(ConnectionManager.SUCCESS, cm.addConnection(getRandomIP(), Connection.Protocol.HTTP));
+    public void newConnectionTest() {
+        assertNotNull(cm.getConnection(getRandomIP(), Connection.Protocol.HTTP));
     }
 
     @Test
-    public void addErrorTest() {
+    public void tooManyConnectionsTest() {
         for (int i = 0; i < cm.getMaxSize(); i++)
-            cm.addConnection(getRandomIP(), Connection.Protocol.HTTP);
+            cm.getConnection(getRandomIP(), Connection.Protocol.HTTP);
 
-        assertEquals(ConnectionManager.ERROR, cm.addConnection(getRandomIP(), Connection.Protocol.HTTP));
+        assertNull(cm.getConnection(getRandomIP(), Connection.Protocol.HTTP));
     }
 
     @Test
     public void getConnectionTest() {
-        cm.addConnection(IPAddresses[0], Connection.Protocol.SMTP);
+        cm.getConnection(IPAddresses[0], Connection.Protocol.SMTP);
         assertNotNull(cm.getConnection(IPAddresses[0], Connection.Protocol.SMTP));
     }
 
     @Test
     public void getConnectionFailTest() {
-        cm.addConnection(IPAddresses[0], Connection.Protocol.SMTP);
+        cm.getConnection(IPAddresses[0], Connection.Protocol.SMTP);
         assertNull(cm.getConnection(IPAddresses[0], Connection.Protocol.HTTP));
     }
 
     @Test
     public void getConnectionPort() {
-        cm.addConnection(IPAddresses[0], Connection.Protocol.SSH);
+        cm.getConnection(IPAddresses[0], Connection.Protocol.SSH);
         assertNotNull(cm.getConnection(IPAddresses[0], 22));
     }
 
     @Test
     public void getConnectionPortFail() {
-        cm.addConnection(IPAddresses[0], Connection.Protocol.SSH);
+        cm.getConnection(IPAddresses[0], Connection.Protocol.SSH);
         assertNull(cm.getConnection(IPAddresses[0], 21));
     }
 }

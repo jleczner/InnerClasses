@@ -1,3 +1,5 @@
+package leczner.jon.InnerClasses;
+
 /**
  * Created by jonathanleczner on 9/28/16.
  */
@@ -8,4 +10,5 @@ public interface Connection {
     int getPort();
     Protocol getProtocol();
     String connect();
+    void close();
 }

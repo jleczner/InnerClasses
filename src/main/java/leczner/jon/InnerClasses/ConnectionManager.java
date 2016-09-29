@@ -1,5 +1,9 @@
+package leczner.jon.InnerClasses;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import static leczner.jon.InnerClasses.Connection.Protocol;
 
 /**
  * Created by jonathanleczner on 9/28/16.
@@ -7,7 +11,7 @@ import java.util.List;
 public class ConnectionManager {
     private List<Connection> connections;
     private int maxSize;
-    public static final String SUCCESS = "New connection added";
+    public static final String SUCCESS = "New connect added";
     public static final String ERROR = "Could not add, manager is full";
 
     public ConnectionManager(int maxSize) {
@@ -19,34 +23,32 @@ public class ConnectionManager {
         return maxSize;
     }
 
-    public Connection getConnection(String IP, Connection.Protocol protocol) {
-        for (Connection c : connections) {
-            String cIP = c.getIP();
-            Connection.Protocol cProtocol = c.getProtocol();
-            if (cIP.equals(IP) && cProtocol == protocol) {
-                return c;
-            }
+    public Connection getConnection(String IP, Protocol protocol) {
+        Connection connection = new ManagedConnection(IP, protocol);
+        if (connection.connect().equals(SUCCESS)) {
+            return connection;
+        } else {
+            return null;
         }
-        return null;
     }
 
     public Connection getConnection(String IP, int port) {
-        for (Connection c : connections) {
-            String cIP = c.getIP();
-            int cPort = c.getPort();
-            if (cIP.equals(IP) && cPort == port) {
-                return c;
-            }
+        Protocol protocol = Protocol.HTTP;
+        switch (port) {
+            case 22:
+                protocol = Protocol.SSH;
+                break;
+            case 25:
+                protocol = Protocol.SMTP;
+                break;
+            default:
+                break;
         }
-        return null;
-    }
-
-    public String addConnection(String IP, Connection.Protocol protocol) {
-        if (connections.size() == maxSize) {
-            return ERROR;
+        Connection connection = new ManagedConnection(IP, protocol);
+        if (connection.connect().equals(SUCCESS)) {
+            return connection;
         } else {
-            connections.add(new ManagedConnection(IP, protocol));
-            return SUCCESS;
+            return null;
         }
     }
 
@@ -87,7 +89,17 @@ public class ConnectionManager {
 
         @Override
         public String connect() {
-            return null;
+            if (connections.size() == maxSize) {
+                return ERROR;
+            } else {
+                connections.add(this);
+                return SUCCESS;
+            }
+        }
+
+        @Override
+        public void close() {
+            return;
         }
     }
 }
