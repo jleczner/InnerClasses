@@ -53,6 +53,10 @@ public class ConnectionManager {
             }
         }
 
+        public int getMaxSize() {
+            return maxSize;
+        }
+
         @Override
         public String getIP() {
             return null;

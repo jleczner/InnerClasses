@@ -31,4 +31,11 @@ public class ConnectionManagerTest {
     public void addConnectionTest() {
         assertEquals(ConnectionManager.SUCCESS, cm.addConnection(getRandomIP(), Connection.Protocol.HTTP));
     }
+
+    @Test
+    public void addErrorTest() {
+        for (int i = 0; i < cm.m)
+        cm.addConnection(getRandomIP(), Connection.Protocol.HTTP);
+
+    }
 }
