@@ -15,6 +15,10 @@ public class ConnectionManager {
         this.maxSize = maxSize;
     }
 
+    public int getMaxSize() {
+        return maxSize;
+    }
+
     public Connection getConnection(String IP, Connection.Protocol protocol) {
         for (Connection c : connections) {
             if (c.getIP().equals(IP) && c.getProtocol() == protocol) {
@@ -51,10 +55,6 @@ public class ConnectionManager {
                 case SSH: return 22;
                 default: return 80;
             }
-        }
-
-        public int getMaxSize() {
-            return maxSize;
         }
 
         @Override
