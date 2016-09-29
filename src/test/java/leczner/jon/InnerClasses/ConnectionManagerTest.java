@@ -50,11 +50,14 @@ public class ConnectionManagerTest {
     public void getFieldsTest() {
         Connection c = cm.getConnection(IPAddresses[0], Protocol.HTTP);
         c.connect();
-        assertEquals(IPAddresses[0], cm.connections.get(0).getIP())
+        assertEquals(IPAddresses[0], cm.getConnections().get(0).getIP());
     }
 
     @Test
     public void getFieldsFailTest() {
-
+        Connection c = cm.getConnection(IPAddresses[0], Protocol.HTTP);
+        c.connect();
+        c.close();
+        assertEquals(ConnectionManager.ERROR, cm.getConnections().get(0).getIP());
     }
 }

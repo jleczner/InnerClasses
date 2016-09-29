@@ -69,6 +69,7 @@ public class ConnectionManager {
         private String IP;
         private int port;
         private Protocol protocol;
+        private boolean closed = false;
 
         public ManagedConnection(String IP, Protocol protocol) {
             this.IP = IP;
@@ -108,17 +109,22 @@ public class ConnectionManager {
 
         @Override
         public String connect() {
-            if (connections.size() == maxSize) {
-                return ERROR;
+            if (!closed) {
+                if (connections.size() != maxSize) {
+                    connections.add(this);
+                    return SUCCESS;
+                } else {
+                    return ERROR;
+                }
             } else {
-                connections.add(this);
-                return SUCCESS;
+                return ERROR;
             }
         }
 
         @Override
         public void close() {
-            return;
+            connections.remove(this);
+            closed = true;
         }
     }
 }
